@@ -1,9 +1,8 @@
 # gstreamer-klv-plugins-release
 GStreamer klv plugins
 
--klvdecode - MISB Klv decoder
--klvencode - MISB Klv encoder
-
+-klvdecode - MISB Klv decoder  
+-klvencode - MISB Klv encoder  
 
 ## MisbCore
 
