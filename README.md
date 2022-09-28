@@ -36,6 +36,11 @@ gst-launch-1.0 filesrc location=~/Movies/2tpacket.bin ! klvdecode ! fakesink dum
 ```
 
 ```
+gst-launch-1.0 filesrc location=~/Movies/2t.ts ! tsdemux name=demux demux. ! queue ! decodebin ! autovideosink demux. ! 'meta/x-klv' ! klvdecode ! queue ! fakesink dump=TRUE
+```
+
+
+```
 gst-launch-1.0 filesrc location=~/Movies/2t.ts ! tsdemux name=demux demux. ! queue ! h264parse ! 'video/x-h264, stream-format=byte-stream' ! avdec_h264 ! autovideosink demux. ! 'meta/x-klv' ! klvdecode ! queue ! fakesink dump=TRUE
 ```
 
