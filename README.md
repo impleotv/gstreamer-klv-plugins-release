@@ -4,6 +4,12 @@ GStreamer klv plugins
 - klvdecode - MISB Klv decoder  
 - klvencode - MISB Klv encoder  
 
+You would need to set the `GST_PLUGIN_PATH` environment variable or run with --gst-plugin-path= arg
+
+```
+export GST_PLUGIN_PATH=~/Work/gstreamer-klv-plugins/build/gst-plugin
+```
+
 ## MisbCore
 
 **gstreamer-klv-plugins** use the [MisbCore](https://www.impleotv.com/content/misbcore/help/index.html) library. You MUST set the library path, so the plugins could find it.
