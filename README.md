@@ -29,6 +29,11 @@ MISBCORE_LIB_PATH=/home/myuser/libraries/MisbCoreNativeLib.so
 MISBCORE_LICENSE_FILE=/home/myuser/licenses/misbCore/MisbCore-Decode.lic
 MISBCORE_LICENSE_KEY=0C203E11-847A7BF1-00B8B052-0B9F984C
 ```
+
+## GST_PLUGIN_PATH
+
+In order to make the plugins show up in a GStreamer, you should either set **GST_PLUGIN_PATH** environmental variable to the directory containing the plugin, or use the command-line option **--gst-plugin-path=**.
+
 ### Testing plugin
 
 ```
