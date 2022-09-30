@@ -31,11 +31,11 @@ OS: Windows x64 / Linux (x64, arm64).
 
 |          | Version             | Download link                                                           | 
 |:---------|:-------------------:|:------------------------------------------------------------------------|
-| **Gstreamer-klv-plugins linux-x64**     |   master | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/misbcore-native-lib-release/releases/latest/download/MisbCoreNativeLib-linux-x64.zip)   | 
-| **Gstreamer-klv-plugins windows-x64**   |   master | N/A | 
-| **Gstreamer-klv-plugins-arm64**   |   master | N/A | 
+| **Gstreamer-klv-plugins linux-x64**     |   v1.0.0 | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
+| **Gstreamer-klv-plugins windows-x64**   |   v1.0.0 | N/A | 
+| **Gstreamer-klv-plugins-arm64**   |   v1.0.0 | N/A | 
 
-*Released on Fri, 30 Sept, 17:53 GMT+3*
+*Released on Fri, 30 Sept, 17:59 GMT+3*
 
 ## Plugin configuration
 
