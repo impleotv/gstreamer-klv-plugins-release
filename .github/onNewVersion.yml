@@ -1,0 +1,100 @@
+name: OnPushNewVersion
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: master 
+          
+      - name: Download artifacts (from StCore build action - MisbCoreNativeLib.dll, MisbCoreNativeLib.so, stored on ftp) 
+        run: |
+           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//misbcoresdk/Native/Windows-x64/* -P ./Windows-x64                  
+           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//misbcoresdk/Native/Linux-x64/* -P ./Linux-x64
+           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//misbcoresdk/Native/Linux-arm64/* -P ./Linux-arm64
+           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//misbcoresdk/Native/Demo/* -P ./Demo
+           wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//misbcoresdk/Native/Doc/CHANGELOG.md -O CHANGELOG.md
+           tree ${{ github.workspace }}
+
+      - name: Zip file for windows-x64
+        uses: papeloto/action-zip@v1
+        with:
+          files: /Windows-x64/MisbCoreNativeLib.dll
+          dest:  /dist/MisbCoreNativeLib-windows-x64.zip
+
+      - name: Zip file for linux-x64
+        uses: papeloto/action-zip@v1
+        with:
+          files: /Linux-x64/MisbCoreNativeLib.so
+          dest:  /dist/MisbCoreNativeLib-linux-x64.zip
+      
+      - name: Zip file for linux-arm64
+        uses: papeloto/action-zip@v1
+        with:
+          files: /Linux-arm64/MisbCoreNativeLib.so
+          dest:  /dist/MisbCoreNativeLib-linux-arm64.zip          
+         
+      - name: Zip file for Demo app
+        uses: papeloto/action-zip@v1
+        with:
+          files: /Demo/
+          dest: /dist/MisbCoreNativeLib-demo.zip
+  
+      - name: List files in the repository
+        run: |
+          tree ${{ github.workspace }}
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/*.zip
+          asset_name: MisbCoreNative
+          tag: ${{ github.ref }}
+          overwrite: true
+          body: "MisbCoreNative release"
+          file_glob: true
+
+      - name: Setup NodeJs 14.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+      - name: Cache dependencies and build outputs to improve workflow execution time.
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+
+      - name: Test
+        run: |
+          echo $RELEASE_VERSION
+          echo ${{ env.RELEASE_VERSION }} 
+          tree ${{ github.workspace }}      
+      - name: Generate README file
+        run: node index.js ${{env.RELEASE_VERSION }}
+        
+      - name: Commit and Push new README.md and CHANGELOG to the repository     
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+          push: true
+          message: "Ver. ${{ env.RELEASE_VERSION }}"
+          
+
+

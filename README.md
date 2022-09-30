@@ -1,51 +1,39 @@
 # gstreamer-klv-plugins-release
-GStreamer klv plugins
 
-- klvdecode - MISB Klv decoder  
-- klvencode - MISB Klv encoder  
+<div align="center">
+  <a >
+    <img src="images/GstKlvPipeline.png" alt="Logo" >
+  </a>
+</div>
 
-You would need to set the `GST_PLUGIN_PATH` environment variable or run with --gst-plugin-path= arg
+**GStreamer KLV plugins** - A set of KLV / MISB metadata plugins (encoder / decoder)
 
-```
-export GST_PLUGIN_PATH=~/Work/gstreamer-klv-plugins/build/gst-plugin
-```
+- klvdecode - MISB KLV decoder plugin  
+- klvencode - MISB KLV encoder plugin  
 
-## MisbCore
+More info on [GStreamer KLV plugins](https://www.impleotv.com/content/gstreamer-klv-plugins/help/index.html).
 
-**gstreamer-klv-plugins** use the [MisbCore](https://www.impleotv.com/content/misbcore/help/index.html) library. You MUST set the library path, so the plugins could find it.
+## System Requirements
+OS: Windows x64 / Linux (x64, arm64).
 
-The path is set in **MISBCORE_LIB_PATH** environment variable.  
-By default, the **MisbCore** library will work in demo mode, so it will only process tags < 15.  
-In order to lift demo restrictions you should apply the license.  
+## Installation
 
-The license file path and the key are set in **MISBCORE_LICENSE_FILE** and **MISBCORE_LICENSE_KEY** respectively. 
-You can set the environment variables by using **export** command. 
-```
-export MISBCORE_LIB_PATH=/home/myuser/libraries/MisbCoreNativeLib.so
-```
-To permanently setup the system-wide environment variables you can add them to the **/etc/environment** file. Note, you need to use **admin** or **sudo** to modify it.  
-```
-MISBCORE_LIB_PATH=/home/myuser/libraries/MisbCoreNativeLib.so
-MISBCORE_LICENSE_FILE=/home/myuser/licenses/misbCore/MisbCore-Decode.lic
-MISBCORE_LICENSE_KEY=0C203E11-847A7BF1-00B8B052-0B9F984C
-```
+**Gstreamer klv plugins** can be downloaded as a **zip** file for the following operation systems:  
+ - gstreamer-klv-plugins-windows-x64.zip  - Windows
+ - gstreamer-klv-plugins-linux-x64.zip    - Linux x64
+ - gstreamer-klv-plugins-arm64.zip  - Linux arm64
 
-## GST_PLUGIN_PATH
+## Download links
 
-In order to make the plugins show up in a GStreamer, you should either set **GST_PLUGIN_PATH** environmental variable to the directory containing the plugin, or use the command-line option **--gst-plugin-path=**.
+|          | Version             | Download link                                                           | 
+|:---------|:-------------------:|:------------------------------------------------------------------------|
+| **Gstreamer-klv-plugins linux-x64**     |  master | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/MisbCoreNativeLib-linux-x64.zip)   | 
+| **Gstreamer-klv-plugins windows-x64**   |  master | N/A | 
+| **Gstreamer-klv-plugins-arm64**   |  master | N/A | 
 
-### Testing plugin
+## Plugin configuration
 
-```
-gst-launch-1.0 filesrc location=~/tpacket.bin ! klvdecode ! fakesink dump=TRUE
-```
+Before using the plugins you'll need to configure some paths/environmental variables.  
 
-```
-gst-launch-1.0 filesrc location=~/stanag.ts ! tsdemux name=demux demux. ! queue ! decodebin ! autovideosink demux. ! 'meta/x-klv' ! klvdecode ! queue ! fakesink dump=TRUE
-```
-
-
-```
-gst-launch-1.0 filesrc location=~/stanag.ts ! tsdemux name=demux demux. ! queue ! h264parse ! 'video/x-h264, stream-format=byte-stream' ! avdec_h264 ! autovideosink demux. ! 'meta/x-klv' ! klvdecode ! queue ! fakesink dump=TRUE
-```
+More info on [plugin configuration](https://www.impleotv.com/content/gstreamer-klv-plugins/help/user-guide/env-variables.html)
 
