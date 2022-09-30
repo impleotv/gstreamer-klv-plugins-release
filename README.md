@@ -1,10 +1,13 @@
+
 # gstreamer-klv-plugins-release
+
 
 <div align="center">
   <a >
     <img src="images/GstKlvPipeline.png" alt="Logo" >
   </a>
 </div>
+
 
 **GStreamer KLV plugins** - A set of KLV / MISB metadata plugins (encoder / decoder)
 
@@ -13,23 +16,26 @@
 
 More info on [GStreamer KLV plugins](https://www.impleotv.com/content/gstreamer-klv-plugins/help/index.html).
 
+
 ## System Requirements
 OS: Windows x64 / Linux (x64, arm64).
 
 ## Installation
 
 **Gstreamer klv plugins** can be downloaded as a **zip** file for the following operation systems:  
- - gstreamer-klv-plugins-windows-x64.zip  - Windows
- - gstreamer-klv-plugins-linux-x64.zip    - Linux x64
- - gstreamer-klv-plugins-arm64.zip  - Linux arm64
+ - Gstreamer-klv-plugins-windows-x64.zip  - Windows
+ - Gstreamer-klv-plugins-linux-x64.zip    - Linux x64
+ - Gstreamer-klv-plugins-arm64.zip  - Linux arm64
 
 ## Download links
 
 |          | Version             | Download link                                                           | 
 |:---------|:-------------------:|:------------------------------------------------------------------------|
-| **Gstreamer-klv-plugins linux-x64**     |  master | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/MisbCoreNativeLib-linux-x64.zip)   | 
-| **Gstreamer-klv-plugins windows-x64**   |  master | N/A | 
-| **Gstreamer-klv-plugins-arm64**   |  master | N/A | 
+| **Gstreamer-klv-plugins linux-x64**     |   master | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/misbcore-native-lib-release/releases/latest/download/MisbCoreNativeLib-linux-x64.zip)   | 
+| **Gstreamer-klv-plugins windows-x64**   |   master | N/A | 
+| **Gstreamer-klv-plugins-arm64**   |   master | N/A | 
+
+*Released on Fri, 30 Sept, 17:53 GMT+3*
 
 ## Plugin configuration
 
