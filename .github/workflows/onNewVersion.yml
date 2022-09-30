@@ -21,10 +21,10 @@ jobs:
           
       - name: Download artifacts (from GstPlugins build action - gstreamer-klv-plugins .dlls, .so, stored on ftp) 
         run: |
-           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//gstreamer-klv-plugins/Windows-x64/* -P ./Windows-x64                  
-       #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//gstreamer-klv-plugins/Linux-x64/* -P ./Linux-x64
-       #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//gstreamer-klv-plugins/Linux-arm64/* -P ./Linux-arm64
-           wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com//gstreamer-klv-plugins/Doc/CHANGELOG.md -O CHANGELOG.md
+       #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Windows-x64/* -P ./Windows-x64                  
+           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Linux-x64/* -P ./Linux-x64
+       #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Linux-arm64/* -P ./Linux-arm64
+           wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Doc/CHANGELOG.md -O CHANGELOG.md
            tree ${{ github.workspace }}
 
       # - name: Zip file for windows-x64
