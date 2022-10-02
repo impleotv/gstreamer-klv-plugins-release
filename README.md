@@ -18,24 +18,20 @@ More info on [GStreamer KLV plugins](https://www.impleotv.com/content/gstreamer-
 
 
 ## System Requirements
-OS: Windows x64 / Linux (x64, arm64).
+OS: Linux x64.
 
 ## Installation
 
 **Gstreamer klv plugins** can be downloaded as a **zip** file for the following operation systems:  
- - Gstreamer-klv-plugins-windows-x64.zip  - Windows
  - Gstreamer-klv-plugins-linux-x64.zip    - Linux x64
- - Gstreamer-klv-plugins-arm64.zip  - Linux arm64
 
 ## Download links
 
 |          | Version             | Download link                                                           | 
 |:---------|:-------------------:|:------------------------------------------------------------------------|
 | **Gstreamer-klv-plugins linux-x64**     |   v1.0.0 | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
-| **Gstreamer-klv-plugins windows-x64**   |   v1.0.0 | N/A | 
-| **Gstreamer-klv-plugins-arm64**   |   v1.0.0 | N/A | 
 
-*Released on Fri, 30 Sept, 17:59 GMT+3*
+*Released on Sun, 2 Oct, 10:55 GMT+3*
 
 ## Plugin configuration
 
