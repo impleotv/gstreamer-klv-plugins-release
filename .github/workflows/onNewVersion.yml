@@ -27,9 +27,8 @@ jobs:
           wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Doc/CHANGELOG.md -O CHANGELOG.md
           tree ${{ github.workspace }}
 
-         #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Windows-x64/* -P ./Windows-x64                  
+        #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Windows-x64/* -P ./Windows-x64                  
         #    sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Linux-arm64/* -P ./Linux-arm64
-       
          
       # - name: Zip file for windows-x64
       #   uses: papeloto/action-zip@v1
