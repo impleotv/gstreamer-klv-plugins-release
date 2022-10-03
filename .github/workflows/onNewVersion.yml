@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Linux-x64/* -P ./Linux-x64
           sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Linux-arm64/* -P ./Linux-arm64
-          sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Demo/klv-decode-dynamic/* -P -r ./Demo/klv-decode-dynamic          
+          sudo wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Demo/klv-decode-dynamic/* -P ./Demo/klv-decode-dynamic          
           wget --ftp-user=${{ secrets.FTP_USER }} --ftp-password=${{ secrets.FTP_PASSWORD }} ftp://ftp.impleotv.com/gstreamer-klv-plugins/Doc/CHANGELOG.md -O CHANGELOG.md
           tree ${{ github.workspace }}
 
