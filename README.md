@@ -34,7 +34,7 @@ OS: Linux x64/arm64.
 | **Gstreamer-klv-plugins-arm64**         |   v1.0.0 | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-arm64.zip)  | 
 
 
-*Released on Sun, 2 Oct, 17:23 GMT+3*
+*Released on Mon, 3 Oct, 12:49 GMT+3*
 
 ## Plugin configuration
 
