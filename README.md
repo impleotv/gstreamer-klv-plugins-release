@@ -30,11 +30,22 @@ OS: Linux x64/arm64.
 
 |          | Version             | Download link                                                           | 
 |:---------|:-------------------:|:------------------------------------------------------------------------|
-| **Gstreamer-klv-plugins linux-x64**     |   v1.0.0 | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
-| **Gstreamer-klv-plugins-arm64**         |   v1.0.0 | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-arm64.zip)  | 
+| **Gstreamer-klv-plugins linux-x64**     |   master | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
+| **Gstreamer-klv-plugins-arm64**         |   master | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-arm64.zip)  | 
+| **Demo**                                |   master | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/demo.zip)  | 
 
 
-*Released on Mon, 3 Oct, 12:49 GMT+3*
+*Released on Mon, 3 Oct, 13:04 GMT+3*
+
+## Plugin configuration
+
+Before using the plugins you'll need to configure some paths/environmental variables.  
+
+More info on [plugin configuration](https://www.impleotv.com/content/gstreamer-klv-plugins/help/user-guide/env-variables.html)
+
+
+
+*Released on Mon, 3 Oct, 13:04 GMT+3*
 
 ## Plugin configuration
 
