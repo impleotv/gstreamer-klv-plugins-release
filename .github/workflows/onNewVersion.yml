@@ -39,13 +39,13 @@ jobs:
       - name: Zip file for linux-x64
         uses: papeloto/action-zip@v1
         with:
-          files: /Linux-x64/libgstklvdecode.so /Linux-x64/MisbCoreNativeLib.so
+          files: /Linux-x64/libgstklvdecode.so /Linux-x64/libgstklvencode.so /Linux-x64/MisbCoreNativeLib.so
           dest:  /dist/gstreamer-klv-plugins-linux-x64.zip
       
       - name: Zip file for linux-arm64
         uses: papeloto/action-zip@v1
         with:
-          files: /Linux-arm64/libgstklvdecode.so /Linux-x64/MisbCoreNativeLib.so
+          files: /Linux-arm64/libgstklvdecode.so /Linux-arm64/libgstklvencode.so /Linux-arm64/MisbCoreNativeLib.so
           dest:  /dist/gstreamer-klv-plugins-linux-arm64.zip        
          
       - name: Zip file for Demo app
