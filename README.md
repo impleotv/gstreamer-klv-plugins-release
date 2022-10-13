@@ -30,12 +30,12 @@ OS: Linux x64/arm64.
 
 |          | Version             | Download link                                                           | 
 |:---------|:-------------------:|:------------------------------------------------------------------------|
-| **Gstreamer-klv-plugins linux-x64**     |   v1.0.1 | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
-| **Gstreamer-klv-plugins-arm64**         |   v1.0.1 | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-arm64.zip)  | 
-| **Demo (source code)**                  |   v1.0.1 | [gstreamer-klv-plugins-demo.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/demo.zip)  | 
+| **Gstreamer-klv-plugins linux-x64**     |   v1.0.2 | [gstreamer-klv-plugins-linux-x64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-x64.zip)   | 
+| **Gstreamer-klv-plugins-arm64**         |   v1.0.2 | [gstreamer-klv-plugins-linux-arm64.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/gstreamer-klv-plugins-linux-arm64.zip)  | 
+| **Demo (source code)**                  |   v1.0.2 | [gstreamer-klv-plugins-demo.zip](https://github.com/impleotv/gstreamer-klv-plugins-release/releases/latest/download/demo.zip)  | 
 
 
-*Released on Tue, 11 Oct, 12:32 GMT+3*
+*Released on Thu, 13 Oct, 18:54 GMT+3*
 
 ## Plugin configuration
 
